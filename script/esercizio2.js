@@ -9,24 +9,22 @@ studente inserendo nell’ordine: nome, cognome e età.
 
 // Array con oggetti studenti 
 var students = [
-    {name: "Gioacchino", 
-    surname: "Rossini", 
+    {Name: "Gioacchino", 
+    Surname: "Rossini", 
     },
 
-    {name: "Giacomo", 
-    surname: "Puccini", 
+    {Name: "Giacomo", 
+    Surname: "Puccini", 
     },
 
-    {name: "Antonio", 
-    surname: "Vivaldi", 
+    {Name: "Antonio", 
+    Surname: "Vivaldi", 
     },
 
-    {name: "Giuseppe", 
-    surname: "Verdi", 
+    {Name: "Giuseppe", 
+    Surname: "Verdi", 
     }
 ]
-
-// console.log(students)
 
 
 // Recuperiamo elemento HTML 
@@ -35,14 +33,29 @@ var studentsDataElement = document.getElementById("student-data");
 var listData = "";
 
 
+
+var userName = prompt("Scegli un nome");
+var userSurname = prompt("Scegli un cognome");
+var userAge = prompt("Scegli un'età");
+
+
+var newStudent = {
+    Name: userName,
+    Surname: userSurname,
+    Age: userAge
+}
+
+students.push(newStudent);
+
+// console.log(students)
 // Ciclo for per recuperare proprietà da stampare 
 for (var i= 0; i < students.length; i++) {
-    console.log(students[i])
-    // var currentStudents = students[i];
-    listData += "<li>" + "Nome" + ": " + students[i].name + "</li>";
-    listData += "<li>" + "Cognome" + ": " + students[i].surname + "</li>";
-    // listData += "<li>" + "Età" + ": " + students[i].age + "</li>";
+    var currentStudent = students[i]
+    for(var key in currentStudent) {
+        listData += "<li>" + key + ": " + currentStudent[key] + "</li>";
+    }
 }
 
 // Stampiamo in pagina  
 studentsDataElement.innerHTML = listData;
+
