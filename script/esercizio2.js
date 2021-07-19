@@ -29,9 +29,9 @@ var students = [
 
 // Recuperiamo elemento HTML 
 var studentsDataElement = document.getElementById("student-data");
+
 // Creiamo variabile di appoggio 
 var listData = "";
-
 
 // Chiediamo all'utente di inserire dei dati 
 var userName = prompt("Scegli un nome");
@@ -46,7 +46,7 @@ var newStudent = {
     Age: userAge
 }
 
-// Aggiungiamo l'ogetto all'array 
+// Aggiungiamo l'oggetto all'array 
 students.push(newStudent);
 
 
@@ -60,4 +60,6 @@ for (var i= 0; i < students.length; i++) {
 
 // Stampiamo in pagina  
 studentsDataElement.innerHTML = listData;
+
+
 
