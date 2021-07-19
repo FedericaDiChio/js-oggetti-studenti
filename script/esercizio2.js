@@ -33,21 +33,23 @@ var studentsDataElement = document.getElementById("student-data");
 var listData = "";
 
 
-
+// Chiediamo all'utente di inserire dei dati 
 var userName = prompt("Scegli un nome");
 var userSurname = prompt("Scegli un cognome");
 var userAge = prompt("Scegli un'età");
 
 
+// Creiamo un nuovo oggetto con i dati inseriti dall'utente 
 var newStudent = {
     Name: userName,
     Surname: userSurname,
     Age: userAge
 }
 
+// Aggiungiamo l'ogetto all'array 
 students.push(newStudent);
 
-// console.log(students)
+
 // Ciclo for per recuperare proprietà da stampare 
 for (var i= 0; i < students.length; i++) {
     var currentStudent = students[i]
