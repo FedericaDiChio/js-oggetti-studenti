@@ -11,19 +11,19 @@ studente inserendo nell’ordine: nome, cognome e età.
 var students = [
     {name: "Gioacchino", 
     surname: "Rossini", 
-    age: 17},
+    },
 
     {name: "Giacomo", 
     surname: "Puccini", 
-    age: 27},
+    },
 
     {name: "Antonio", 
     surname: "Vivaldi", 
-    age: 37},
+    },
 
     {name: "Giuseppe", 
     surname: "Verdi", 
-    age: 47}
+    }
 ]
 
 // console.log(students)
@@ -35,13 +35,14 @@ var studentsDataElement = document.getElementById("student-data");
 var listData = "";
 
 
+// Ciclo for per recuperare proprietà da stampare 
 for (var i= 0; i < students.length; i++) {
     console.log(students[i])
     // var currentStudents = students[i];
     listData += "<li>" + "Nome" + ": " + students[i].name + "</li>";
     listData += "<li>" + "Cognome" + ": " + students[i].surname + "</li>";
-    listData += "<li>" + "Età" + ": " + students[i].age + "</li>";
+    // listData += "<li>" + "Età" + ": " + students[i].age + "</li>";
 }
 
-// // Stampiamo in pagina  
+// Stampiamo in pagina  
 studentsDataElement.innerHTML = listData;
